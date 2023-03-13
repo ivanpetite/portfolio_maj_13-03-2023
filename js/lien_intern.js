@@ -1,0 +1,1 @@
+$(".bg_shadow2").on('click',function(){$("#poster")[0].click();});

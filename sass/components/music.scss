@@ -1,0 +1,90 @@
+.audio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  margin: 0px;
+  z-index: 98;
+}
+#audio-visualiser {
+  height: 35px;
+  margin: 5px 5px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#audio-visualiser .audio-wire {
+  background-color: #ffe0dc;
+  margin: 0 1.2px;
+  padding: 0 0.5px;
+  height: 15px;
+  z-index: 0;
+  animation-play-state: paused;
+  --animdur: 0.6s;
+  --animn: animMUSIC;
+  --animtf: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  --animic: infinite;
+  --animdir: alternate;
+  --animps: running;
+  will-change: height;
+}
+
+.bg-audio-wire {
+  background-color: #0b0a0ade;
+  height: 60%;
+  position: absolute;
+  width: 70%;
+  z-index: -1;
+  border-radius: 0.4px;
+  border: 0.1px solid #cbcbcb;
+  -webkit-filter: drop-shadow(0px 0px 0.5px rgb(155, 155, 155));
+  filter: drop-shadow(0px 0px 0.5px rgb(155, 155, 155));
+}
+
+#audio-visualiser .audio-wire-1 {
+  --animdel: 50ms;
+}
+
+#audio-visualiser .audio-wire-2 {
+  --animdel: 150ms;
+}
+
+#audio-visualiser .audio-wire-3 {
+  --animdel: 300ms;
+}
+
+#audio-visualiser .audio-wire-4 {
+  --animdel: 450ms;
+}
+
+#audio-visualiser .audio-wire-5 {
+  --animdel: 300ms;
+}
+
+#audio-visualiser .audio-wire-6 {
+  --animdel: 150ms;
+}
+
+#audio-visualiser .audio-wire-7 {
+  --animdel: 50ms;
+}
+
+@keyframes animMUSIC {
+  to {
+    height: 30%;
+  }
+  from {
+    height: 10%;
+  }
+}
+
+[data-animation] {
+  animation: var(--animn, none) var(--animdur, 0s) var(--animtf, linear)
+    var(--animdel, 0s) var(--animic, infinite) var(--animdir, alternate)
+    var(--animfm, none) var(--animps, running);
+}

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Central Avenue';
+    src: url('CentralAvenue-Bold.woff') format('woff'),
+        url('CentralAvenue-Bold.ttf') format('truetype'),
+        url('CentralAvenue-Bold.svg#CentralAvenue-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

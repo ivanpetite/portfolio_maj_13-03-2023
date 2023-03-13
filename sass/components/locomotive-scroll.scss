@@ -1,0 +1,77 @@
+html {
+  &.has-scroll-smooth {
+    overflow: hidden;
+  }
+
+  &.has-scroll-dragging {
+    user-select: none;
+  }
+}
+
+body {
+  .has-scroll-smooth & {
+    overflow: hidden;
+  }
+}
+
+[data-scroll-container] {
+  .has-scroll-smooth & {
+    min-height: 100vh;
+  }
+  [data-scroll-direction="horizontal"] & {
+    white-space: nowrap;
+  }
+}
+
+[data-scroll-section] {
+  [data-scroll-direction="horizontal"] & {
+    white-space: nowrap;
+  }
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s;
+  opacity: 1;
+
+  &:hover {
+    transform: scaleX(1.5);
+  }
+
+  [data-scroll-direction="horizontal"] & {
+    transform: scaleY(1);
+
+    &:hover {
+      transform: scaleY(1);
+    }
+  }
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffe0dc;
+  opacity: 1;
+  width: 4px;
+  margin: 0px;
+  cursor: grab;
+
+  .has-scroll-dragging & {
+    cursor: grabbing;
+  }
+
+  [data-scroll-direction="horizontal"] & {
+    right: auto;
+  }
+}
+
+[data-scroll-container] {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}

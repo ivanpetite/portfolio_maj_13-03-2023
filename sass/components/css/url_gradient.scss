@@ -1,0 +1,13 @@
+.stop1 {
+  stop-color: $red;
+}
+.stop2 {
+  stop-color:$black;
+}
+.stop3 {
+  stop-color:$blue;
+}
+
+$red
+{stop offset: 0%;
+stop-color:red;}

@@ -1,0 +1,144 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  white-space: nowrap;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  white-space: nowrap;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s;
+  opacity: 1;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.5);
+}
+[data-scroll-direction=horizontal] .c-scrollbar {
+  transform: scaleY(1);
+}
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffe0dc;
+  opacity: 1;
+  width: 4px;
+  margin: 0px;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+}
+
+[data-scroll-container] {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  contain: layout style size;
+  pointer-events: none;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  transform: scale(0.2);
+  background: #ffe0dc;
+  border-radius: 50%;
+}
+.cursor:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  display: block;
+  width: 10px;
+  height: 2px;
+  transform: scale(0.3);
+  background: rgb(77, 70, 70);
+}
+.cursor:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  display: block;
+  width: 2px;
+  height: 10px;
+  transform: scale(0.3);
+  background: rgb(77, 70, 70);
+}
+
+.cursor-expand {
+  position: fixed;
+  transform-origin: 0, 0;
+  z-index: 100;
+  contain: layout style size;
+  pointer-events: none;
+  top: -18px;
+  left: -18px;
+  width: 48px;
+  height: 48px;
+  transform: scale(0);
+  background: #ffe0dc;
+  border-radius: 50%;
+}
+.cursor-expand:before {
+  content: "";
+  position: absolute;
+  top: 23.5px;
+  left: 14px;
+  display: block;
+  width: 20px;
+  height: 1px;
+  transform: scale(0.8);
+  background: rgb(77, 70, 70);
+}
+.cursor-expand:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 23.5px;
+  display: block;
+  width: 1px;
+  height: 20px;
+  transform: scale(0.8);
+  background: rgb(77, 70, 70);
+}
+
+.hero-inner {
+  text-decoration: none;
+}/*# sourceMappingURL=cursor.css.map */

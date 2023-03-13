@@ -1,0 +1,26 @@
+{
+  "name": "portfolio_ivan_petite",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.0",
+  "description": "portfolio_motion_design",
+  "author": "ivan_petite",
+  "license": "MIT",
+  "scripts": {
+    "final": "parcel open_soon.js"
+  },
+  "dependencies": {
+    "dart-sass": "^1.25.0",
+    "gitignore": "^0.7.0",
+    "gsap": "./gsap-bonus.tgz",
+    "javascript": "^1.0.0",
+    "locomotive-scroll": "^4.1.4",
+    "sass": "^1.49.11",
+    "util": "^0.12.4",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10"
+  }
+}

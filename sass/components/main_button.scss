@@ -1,0 +1,109 @@
+.mainbutton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 25px;
+}
+
+.main_button_ancre {
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 0;
+  height: 40px;
+}
+
+#circle {
+  stroke-miterlimit: 1;
+  stroke-dasharray: 50px;
+
+  transform: rotate(90deg);
+  z-index: 99;
+}
+
+.second_cercle {
+  z-index: 0;
+}
+
+$dash-array: 50px;
+.anim_cercle {
+  stroke-dasharray: $dash-array; /*animation du cercle au mouseenter*/
+  stroke-width: 0.3px;
+  stroke: #ffe0dc;
+  stroke-dashoffset: $dash-array;
+  animation: 0.325s ease 0s emptyOutline;
+}
+@keyframes emptyOutline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -$dash-array;
+  }
+}
+
+.anim_cercle:hover {
+  stroke-dashoffset: 50-$dash-array;
+  animation: 0.325s ease 0s fillOutline;
+}
+@keyframes fillOutline {
+  from {
+    stroke-dashoffset: $dash-array;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arrow {
+  fill: none;
+  stroke-width: 1.5px;
+  stroke: #ffe0dc;
+  stroke-miterlimit: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  top: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 0;
+  bottom: 4px;
+}
+
+.arrow2 {
+  fill: none;
+  stroke-width: 1.5px;
+  stroke: #ffe0dc;
+  stroke-miterlimit: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  top: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+  bottom: 4px;
+}
+
+
+$translate: 0, 0, 0, 2;
+.anim_arrow {
+  transform: matrix(0,0,0,0); /*animation du cercle au mouseenter*/
+  animation: 0.325s ease 0s emptyTranslate;
+}
+@keyframes emptyTranslate {
+  from {
+    transform: matrix(0,0,0,0);
+  }
+  to {
+    transform: matrix($translate);
+  }
+}

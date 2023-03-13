@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'ApercuProMono';
+    src: url('ApercuProMono.woff2') format('woff2'),
+        url('ApercuProMono.woff') format('woff'),
+        url('ApercuProMono.ttf') format('truetype'),
+        url('ApercuProMono.svg#ApercuProMono') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ApercuBold';
+    src: url('ApercuBold.woff2') format('woff2'),
+        url('ApercuBold.woff') format('woff'),
+        url('ApercuBold.ttf') format('truetype'),
+        url('ApercuBold.svg#ApercuBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
