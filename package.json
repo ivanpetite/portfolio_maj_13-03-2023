@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "portfolio_motion_design",
   "author": "ivan_petite",
-  "license": "MIT",
+  "license": "GPL3.0",
   "scripts": {
-    "final": "parcel open_soon.js"
+    "final": "index.html"
   },
   "dependencies": {
     "dart-sass": "^1.25.0",
