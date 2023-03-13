@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "portfolio_motion_design",
   "author": "ivan_petite",
-  "license": "GPL3.0",
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "final": "index.html"
   },
