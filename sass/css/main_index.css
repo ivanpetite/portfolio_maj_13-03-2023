@@ -95,7 +95,7 @@ body {
   margin: 0;
   padding: 0;
   z-index: 0;
-  fill: #ffffff;
+  fill: white;
   fill-rule: evenodd;
   transition: all 0.33s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
