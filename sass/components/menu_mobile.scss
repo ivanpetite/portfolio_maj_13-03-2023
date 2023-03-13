@@ -70,15 +70,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.menu-desktop {
-  display: flex; /* pour le menu en mode desktop */
-  width: 100%;
-  max-width: 90vw;
-  margin-bottom: 0px;
-  font-family: "ApercuProMono";
-  font-style: normal;
-  font-weight: 100;
-  flex-direction: column;
-  align-items: flex-end;
-}

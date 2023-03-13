@@ -6,7 +6,7 @@
   "author": "ivan_petite",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "final": "index.html"
+    "final": "parcel index.html"
   },
   "dependencies": {
     "dart-sass": "^1.25.0",
