@@ -185,7 +185,7 @@
   <div data-scroll-section>
     <div class="banniere" data-scroll> <!-- pour le background principal -->
       <picture class="picture">
-        <source media="(max-width: 10000px and (min-width : 1400px))" srcset="../gif/accueil/page_acceuil.avif">
+        <source media="(max-width: 10000px) and (min-width : 1400px)" srcset="../gif/accueil/page_acceuil.avif">
         <source media="(max-width: 1399px) and (min-width : 500px)" srcset="../gif/accueil/page_acceuil.avif">
         <source media="(max-width: 499px)" srcset="../gif/accueil/page_acceuil.avif">
         <img class="img" src="../gif/accueil/page_acceuil.avif" alt="soon_cristal">
@@ -193,35 +193,42 @@
     </div>
 
     <div class="conteneur d-flex justify-content-center mainbutton hide">
-      <a title="social" id="declenche_cercle" class="main_button_ancre declenche_line anchor-b">
+      <a title="social" class="main_button_ancre declenche_arrow anchor-b">
           <div class="conteneur d-flex justify-content-center circle">
                 <g id="circle">
                   <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="" viewBox="0 0 16 16">
                     <circle cx="8" cy="8" r="7.9" fill="grey" stroke-width=".3px" stroke="#636060" fill-opacity=".2" filter="url(#blur)"/>
-                    <circle id="anim_cercle" cx="8" cy="8" r="7.9" fill="grey" stroke-width="0px" stroke="#ffe0dc" stroke-dashoffset="0" fill-opacity=".2" filter="url(#blur)"/>
-                    <circle cx="8" cy="8" r="7.5" fill="transparent" stroke-width="0.1px" stroke="#ffe0dc" fill-opacity="1" filter="url(#blur2)"/>
+                    <circle cx="8" cy="8" r="7.9" fill="grey" fill-opacity=".2" filter="url(#blur)"/>
+                    <circle cx="8" cy="8" r="7.3" fill="transparent" stroke-width="0.1px" stroke="#ffe0dc" fill-opacity="1" filter="url(#blur2)"/>
+                    <circle class="anim_cercle" cx="8" cy="8" r="7.9" fill="transparent"/>
                     <filter id="blur">
                       <feGaussianBlur in="SourceGraphic" stdDeviation="0"/>
                     </filter>
                     <filter id="blur2">
-                      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+                      <feGaussianBlur in="SourceGraphic" stdDeviation=".9"/>
                     </filter>
                   </svg>
                  </g>
           </div>
-            <div class="conteneur d-flex justify-content-center arrow">
-                <g class="arrow" id="arrow">
+            <div class="conteneur d-flex justify-content-center arrow" iid="arrow">
+              <g class="arrow">
+                <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.98 25.65">
+                    <path d="M15,27.78c4.81,0,4.92,5.28,4.92,5.28S20,27.78,25,27.78" transform="translate(-15.01 -7.43)"/>
+                    <line x1="4.99" x2="4.81" y2="25.65"/>
+                    <line x1="4.99" x2="4.81" y2="25.65"/>
+                  </svg>
+              </g>
+                <g class="arrow">
                   <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.98 25.65">
                       <path d="M15,27.78c4.81,0,4.92,5.28,4.92,5.28S20,27.78,25,27.78" transform="translate(-15.01 -7.43)"/>
-                      <line class="line_derriere" x1="4.99" x2="4.81" y2="25.65"/>
-                      <line id="line_red" x1="4.99" x2="4.81" y2="25.65"/>
+                      <line x1="4.99" x2="4.81" y2="25.65"/>
+                      <line x1="4.99" x2="4.81" y2="25.65"/>
                     </svg>
                 </g>
                 <a title="about" class="aboutto"></a>
             </div>
       </a>
     </div>
-
   </div>
 
   <div class="main-profil" data-scroll-section>
@@ -501,7 +508,7 @@
     </div>
   </div>
   <audio preload="metadata" src="../music/music.mp3" id="music" loop autoplay></audio>
-
+</div>
 </body>
   <a title="lien vers showreel" href="./indexreel.html"></a>
   <a title="lien vers kineloop" href="./indexkine.html"></a>
