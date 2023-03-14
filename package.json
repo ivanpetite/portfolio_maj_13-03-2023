@@ -6,20 +6,20 @@
   "author": "ivan_petite",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "final": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "dart-sass": "^1.25.0",
-    "gitignore": "^0.7.0",
-    "gsap": "./gsap-bonus.tgz",
-    "javascript": "^1.0.0",
     "locomotive-scroll": "^4.1.4",
     "sass": "^1.49.11",
+    "gsap": "^3.11.4",
     "util": "^0.12.4",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2",
+    "gitignore": "^0.7.0",
     "parcel": "^2.3.2",
     "process": "^0.11.10"
   }
