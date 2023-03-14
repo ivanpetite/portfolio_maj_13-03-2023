@@ -1087,9 +1087,10 @@ globals@^13.2.0:
   dependencies:
     type-fest "^0.20.2"
 
-gsap@./gsap-bonus.tgz:
-  version "3.10.2"
-  resolved "./gsap-bonus.tgz#ee087ffc9a8a98bd3454a990a6100a1f492f18d8"
+gsap@^3.11.4:
+  version "3.11.4"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.4.tgz#e6d972d3509a7431b86d81d6fc3bbeb6862e5ff1"
+  integrity sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==
 
 has-bigints@^1.0.1:
   version "1.0.1"
@@ -1303,11 +1304,6 @@ is-weakref@^1.0.1:
   integrity sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==
   dependencies:
     call-bind "^1.0.2"
-
-javascript@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/javascript/-/javascript-1.0.0.tgz#186c6d8d73fe9dae5cded839de8e60ec7826ec86"
-  integrity sha512-PnTGALRCw+1vqPQj5iE1xxZnEOPraSjIZ9LEZGjqP9I9iyjgRAXN7FYLDgPqZi7PhZxb3oLyYTJBttQpGCrMtg==
 
 js-tokens@^4.0.0:
   version "4.0.0"
