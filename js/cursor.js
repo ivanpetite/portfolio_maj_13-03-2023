@@ -12,8 +12,8 @@ export default class Cursor {
     this.Item = document.querySelectorAll(".hero-inner");
     this.bounds = this.Cursor.getBoundingClientRect();
     this.cursorConfigs = {
-      x: { previous: 0, current: 0, amt: 0.2 },
-      y: { previous: 0, current: 0, amt: 0.2 },
+      x: { previous: 0, current: 0, amt: 0.7 },
+      y: { previous: 0, current: 0, amt: 0.7 },
     };
     this.onMouseMoveEv = () => {
       this.cursorConfigs.x.previous = this.cursorConfigs.x.current = mouse.x;
@@ -87,7 +87,7 @@ export default class Cursor {
   
   ScaleCursor(el, amount) {
     gsap.to(el, {
-      duration: 0.4,
+      duration: 0.6,
       scale: amount,
       ease: "Power3.easeOut",
     });

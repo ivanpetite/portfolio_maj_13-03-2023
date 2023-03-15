@@ -26,7 +26,7 @@
   width: 100%;
   position: absolute;
   padding: 0px;
-  background-color: url(../../img/noise_desktop.avif);
+  background-color: black;
   z-index: 90;
   z-index: 5;
   overflow: hidden;
@@ -129,4 +129,11 @@
   font-weight: 100;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.hide_menu2 {
+  -webkit-text-fill-color: white;
+}
+.hide_menu2:hover {
+  -webkit-text-fill-color: rgb(240, 97, 30);
 }

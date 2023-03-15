@@ -94,8 +94,6 @@
   z-index: 1;
   animation: clip1 1s cubic-bezier(0.92, 0.52, 0.21, 0.89) 1 reverse forwards;
   animation-delay: 0s;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   overflow-x: hidden;
   overflow-y: hidden;

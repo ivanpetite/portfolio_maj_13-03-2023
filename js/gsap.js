@@ -51,20 +51,21 @@ const locoScroll = new LocomotiveScroll({
   smooth: true,
   direction: "vertical",
   multiplier: 1,
-  firefoxMultiplier: 50,
-  touchMultiplier: 2,
+  firefoxMultiplier: 1,
+  touchMultiplier: 1,
 
   smartphone: {
     smooth: true,
     direction: "vertical",
     gestureDirection: "vertical",
-    touchMultiplier: 10,
+    touchMultiplier: 5,
 
   },
   tablet: {
     smooth: true,
     direction: "vertical",
     gestureDirection: "vertical",
+    touchMultiplier: 3,
   }
 });
 
