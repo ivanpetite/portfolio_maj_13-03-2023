@@ -66,6 +66,7 @@ body {
   padding: 0;
   overflow: hidden;
   z-index: 100;
+  font-size: 16px;
 }
 
 .entree_end {
@@ -76,24 +77,6 @@ body {
   100% {
     opacity: 0;
     visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 424px) {
-  .typographie {
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (min-width: 425px) and (max-width: 767px) {
-  .typographie {
-    font-size: 1.8em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .typographie {
-    font-size: 2em;
   }
 }
 
@@ -137,7 +120,6 @@ body {
 
 .typographie {
   font-family: "ITC Odyssee";
-  font-size: 1.8em;
   color: transparent;
   animation: opac_typo 0.3s ease forwards;
   margin: 0;
@@ -219,24 +201,10 @@ body {
   transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
-@media screen and (max-width: 425px) {
-  .hide {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
 .is_visible {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s linear 0.33s, opacity 0.33s linear;
-}
-
-@media screen and (min-width: 425px) {
-  .is_visible {
-    visibility: hidden;
-    opacity: 0;
-  }
 }
 
 .txt_mobile {
@@ -402,13 +370,6 @@ a:hover {
   transition: opacity 0.33s linear;
 } /* permet d'enlever la description des projets */
 
-@media screen and (max-width: 767px) {
-  .remove_text {
-    display: none;
-    opacity: 0;
-  }
-}
-
 .illustration {
   height: 10%;
 }
@@ -473,8 +434,8 @@ a:hover {
   margin-left: 15px;
   padding-right: 30px;
 }
-/*  taille images ideale larg = 450 h= 560px */
 
+/*  taille images ideale larg = 450 h= 560px */
 .arrplan_picture2 {
   position: absolute;
   object-fit: cover;
@@ -521,23 +482,9 @@ a:hover {
   opacity: 1;
 }
 
-@media screen and (min-width: 425px) {
-  .is_displayed {
-    display: none;
-    opacity: 0;
-  }
-}
-
 .not_displayed {
   display: flex; /* cache ou rend visible les credits+les icons en mode tablet */
   opacity: 1;
-}
-
-@media screen and (max-width: 425px) {
-  .not_displayed {
-    display: none;
-    opacity: 0;
-  }
 }
 
 .mobile_icons {
@@ -729,5 +676,161 @@ article {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+// media queries
+// only mobile
+@media screen and (max-width: 424px) {
+  .typographie {
+    font-size: 1.5em;
+  }
+  .not_displayed {
+    display: none;
+    opacity: 0;
+  }
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .main-profil {
+    padding: 50px 30px 0px;
+    font-size: 0.8em;
+  }
+  article {
+    margin-top: 50px;
+  }
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 400px;
+    max-height: 500px;
+    height: 400px;
+  }
+  .title {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #ffe0dc;
+  }
+  .numeroprojet {
+    display: block;
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1),
+      transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .arrplan_picture2 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+  }
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+}
+
+// only tablet
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .typographie {
+    font-size: 1.8em;
+  }
+
+  article {
+    margin-top: 0px;
+    height: 100vh;
+    background-color: white;
+  }
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-height: 50vh;
+    height: 50vh;
+  }
+  .arrplan_img1 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+
+    transform: translate(0%, 50%);
+
+    height: 50vh;
+
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .arrplan_img2 {
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+
+    transform: translate(0%, 50%);
+
+    height: 50vh;
+
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+  .numeroprojet {
+    position: absolute;
+    top: 65px;
+    font-size: 8em;
+  }
+  .numeroprojet2 {
+    position: absolute;
+    top: 225px;
+    font-size: 4em;
+  }
+  .numeroprojet3 {
+    position: absolute;
+    top: 30px;
+    font-size: 1.5em;
+  }
+  .numeroprojet4 {
+    position: absolute;
+    top: 60px;
+    font-size: 2em;
+  }
+}
+
+// only desktop
+@media screen and (min-width: 1200px) {
+  .typographie {
+    font-size: 2em;
+  }
+}
+
+// mobile + tablet
+@media screen and (max-width: 767px) {
+  .remove_text {
+    display: none;
+    opacity: 0;
+  }
+}
+
+// tablet + desktop
+@media screen and (min-width: 425px) {
+  .is_displayed {
+    display: none;
+    opacity: 0;
+  }
+  .is_visible {
+    visibility: hidden;
+    opacity: 0;
   }
 }

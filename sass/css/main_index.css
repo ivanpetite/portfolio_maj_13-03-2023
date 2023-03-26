@@ -49,6 +49,7 @@ body {
   display: flex; /*debut loader page*/
   position: fixed;
   align-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -70,20 +71,14 @@ body {
     visibility: hidden;
   }
 }
-.logotype {
-  opacity: 1;
-}
-
-.typographie {
+.embleme {
   display: flex;
+  position: fixed;
+  bottom: 30px;
   justify-items: center;
   justify-content: center;
   align-items: center;
-  font-family: "ITC Odyssee";
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-  color: white;
+  z-index: 95;
 }
 
 #insigne {
@@ -91,23 +86,47 @@ body {
   justify-items: center;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 35px;
   margin: 0;
   padding: 0;
-  z-index: 0;
-  fill: white;
+  bottom: 0px;
+  fill: rgb(197, 197, 197);
   fill-rule: evenodd;
-  transition: all 0.33s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.embleme {
-  display: flex; /*fin loader page*/
+.logotype {
+  opacity: 1;
+  display: flex;
+  position: absolute;
   justify-items: center;
   justify-content: center;
   align-items: center;
-  padding-bottom: 8px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 96;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
+.typographie {
+  font-family: "ITC Odyssee";
+  font-size: 1.8em;
+  color: transparent;
+  animation: opac_typo 0.3s ease forwards;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes opac_typo {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
 .banniere {
   height: 100vh;
   width: 100%;
@@ -170,34 +189,18 @@ body {
   transition: all 0.33s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#logo:hover {
-  fill: #15ff00;
-}
-
 .hide {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
-@media screen and (max-width: 425px) {
-  .hide {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .is_visible {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
-@media screen and (min-width: 425px) {
-  .is_visible {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
 .txt_mobile {
   padding: 0px;
   position: sticky;
@@ -359,12 +362,6 @@ a:hover {
   opacity: 1;
   transition: opacity 0.33s linear;
 } /* permet d'enlever la description des projets */
-@media screen and (max-width: 767px) {
-  .remove_text {
-    display: none;
-    opacity: 0;
-  }
-}
 .illustration {
   height: 10%;
 }
@@ -486,23 +483,11 @@ a:hover {
   opacity: 1;
 }
 
-@media screen and (min-width: 425px) {
-  .is_displayed {
-    display: none;
-    opacity: 0;
-  }
-}
 .not_displayed {
   display: flex; /* cache ou rend visible les credits+les icons en mode tablet */
   opacity: 1;
 }
 
-@media screen and (max-width: 425px) {
-  .not_displayed {
-    display: none;
-    opacity: 0;
-  }
-}
 .mobile_icons {
   flex-direction: row;
   flex-wrap: nowrap;
@@ -693,5 +678,144 @@ article {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@media screen and (max-width: 424px) {
+  .typographie {
+    font-size: 1.5em;
+  }
+  .not_displayed {
+    display: none;
+    opacity: 0;
+  }
+  .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .main-profil {
+    padding: 50px 30px 0px;
+    font-size: 0.8em;
+  }
+  article {
+    margin-top: 50px;
+  }
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    min-height: 400px;
+    max-height: 500px;
+    height: 400px;
+  }
+  .title {
+    width: 100%;
+    height: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #ffe0dc;
+  }
+  .numeroprojet {
+    display: block;
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .arrplan_picture2 {
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+  }
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .typographie {
+    font-size: 1.8em;
+  }
+  article {
+    margin-top: 0px;
+    height: 100vh;
+    background-color: white;
+  }
+  .projet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-height: 50vh;
+    height: 50vh;
+  }
+  .arrplan_img1 {
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    transform: translate(0%, 50%);
+    height: 50vh;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+  .arrplan_img2 {
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    width: 100%;
+    left: 0px;
+    transform: translate(0%, 50%);
+    height: 50vh;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+  .numeroprojet {
+    position: absolute;
+    top: 65px;
+    font-size: 8em;
+  }
+  .numeroprojet2 {
+    position: absolute;
+    top: 225px;
+    font-size: 4em;
+  }
+  .numeroprojet3 {
+    position: absolute;
+    top: 30px;
+    font-size: 1.5em;
+  }
+  .numeroprojet4 {
+    position: absolute;
+    top: 60px;
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .typographie {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .remove_text {
+    display: none;
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 425px) {
+  .is_displayed {
+    display: none;
+    opacity: 0;
+  }
+  .is_visible {
+    visibility: hidden;
+    opacity: 0;
   }
 }/*# sourceMappingURL=main_index.css.map */

@@ -58,7 +58,7 @@
   opacity: 1;
 }
 
-@media screen and (min-width: 0px) and (max-width: 499px) {
+@media screen and (min-width: 0px) and (max-width: 424px) {
   .main-profil {
     padding: 50px 30px 0px;
     font-size: 0.8em;
@@ -68,9 +68,9 @@
     max-height: 70px;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 1399px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .main-profil {
-    padding: 50px 150px 0px;
+    padding: 100px 150px 100px;
     font-size: 0.9em;
   }
   .photo-profil {
@@ -78,9 +78,9 @@
     max-height: 75px;
   }
 }
-@media screen and (min-width: 1400px) and (max-width: 10000px) {
+@media screen and (min-width: 768px) {
   .main-profil {
-    padding: 50px 420px 0px;
+    padding: 100px 420px 100px;
     font-size: 1.1em;
   }
   .photo-profil {
