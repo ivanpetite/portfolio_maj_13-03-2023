@@ -6,10 +6,12 @@
   "author": "ivan_petite",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel serve index.html --public-url / --dist-dir dist",
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
     "dart-sass": "^1.25.0",
     "gsap": "^3.11.4",
     "locomotive-scroll": "^4.1.4",
@@ -17,7 +19,7 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2",
     "process": "^0.11.10",
     "yarn": "^1.22.19"
