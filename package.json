@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "portfolio_motion_design",
   "author": "ivan_petite",
-  "license": "AGPL-3.0-or-later",
+  "license": "gpl-3.0",
   "scripts": {
     "start": "parcel serve index.html --public-url / --dist-dir dist",
     "build": "parcel build index.html"
