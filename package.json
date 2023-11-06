@@ -8,6 +8,7 @@
   "scripts": {
     "start": "parcel index.html --public-url / --dist-dir dist",
     "build": "parcel build index.html --public-url .",
+    "preview": "sirv dist",
     "second": "parcel index3.html --public-url / --dist-dir dist",
     "icon": "parcel icones.html --public-url / --dist-dir dist"
   },
@@ -18,6 +19,7 @@
     "gsap": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
     "sass": "^1.69.5",
+    "sirv-cli": "^2.0.2",
     "util": "^0.12.5",
     "wrangler": "^3.14.0"
   },
