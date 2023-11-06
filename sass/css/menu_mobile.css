@@ -1,3 +1,7 @@
+:root {
+  font: size 16px "ApercuProMono";
+}
+
 .menu_main {
   position: absolute;
   bottom: 100%;
@@ -90,17 +94,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url("../../img/image2.avif");
+  background: url("../../img/anims/menu/menu.avifs");
   background-size: cover;
-  background-blend-mode: multiply;
-  background-color: rgb(71, 71, 71);
+  background-blend-mode: exclusion;
+  background-color: rgb(255, 255, 255);
   z-index: 1;
   animation: clip1 1s cubic-bezier(0.92, 0.52, 0.21, 0.89) 1 reverse forwards;
   animation-delay: 0s;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .texte_loader_center {
@@ -110,7 +113,7 @@
   height: 100%;
   align-content: center;
   align-items: center;
-  font-size: 7em;
+  font-size: 7rem;
   color: rgba(255, 255, 255, 0.7);
   font-family: "TIMMONS NY 2.0", Arial, Helvetica, sans-serif;
   margin: 0px;
@@ -177,7 +180,7 @@
 }
 @keyframes borderr {
   100% {
-    border: 10px solid rgb(255, 255, 255);
+    border: 10px solid white;
   }
 }
 .item_center {
@@ -188,7 +191,7 @@
   align-content: flex-end;
   justify-content: center;
   align-items: center;
-  font-size: 4em;
+  font-size: 4rem;
   color: rgba(255, 255, 255, 0.7);
   font-family: "TIMMONS NY 2.0", Arial, Helvetica, sans-serif;
   margin: 0px;

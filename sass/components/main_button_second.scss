@@ -1,0 +1,260 @@
+.mainbutton {
+  position: absolute;
+  width: 100vw;
+  height: 65px;
+  display: flex;
+  bottom: calc(50% - 120px);
+  transform: rotate(-90deg);
+}
+
+.main_button_ancre {
+  width: 65px;
+  height: 65px;
+  z-index: 99;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 0;
+  height: 65px;
+}
+
+.circle2 {
+  z-index: -99;
+}
+
+#circle {
+  z-index: 99;
+}
+
+.second_cercle {
+  z-index: 0;
+}
+
+$dash-array: 50px;
+.anim_cercle {
+  transform: transparent;
+  transform-origin: center;
+  transform: rotate(270deg);
+  stroke-dasharray: $dash-array; /*animation du cercle au mouseenter*/
+  stroke-width: 0.3px;
+  stroke: #ffe0dc;
+  stroke-dashoffset: $dash-array;
+  animation: 0.325s ease 0s emptyOutline;
+  transition: 0.325s ease;
+}
+@keyframes emptyOutline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -$dash-array;
+  }
+}
+
+.hide {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.is_visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.txt_mobile {
+  padding: 0px;
+  height: 22px;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.txt_portfolio {
+  display: flex;
+  position: absolute;
+  margin-left: 40px;
+  font-family: "ApercuProMono";
+  font-style: normal;
+  height: 18px;
+  font-weight: 100;
+  color: #ffe0dc;
+  justify-content: flex-start;
+  opacity: 0;
+  animation: opacityauto 0.33s 0.2s forwards;
+}
+@keyframes opacityauto {
+  100% {
+    opacity: 1;
+  }
+}
+
+.txt_portfolio_menu {
+  font-family: "ApercuProMono";
+  font-style: normal;
+  font-weight: 100;
+  color: #ffe0dc;
+  height: 18px;
+  width: 100vw;
+  display: flex;
+  left: -18px;
+  position: absolute;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+.sticky_main {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 62px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.menu_transformation {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  height: 60px;
+  top: 0px;
+}
+.sticky_main2 {
+  display: flex; /* pour le menu en mode mobile */
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  margin-top: 0px;
+  z-index: 97;
+  visibility: collapse;
+  overflow: hidden;
+  transition: opacity 2s linear;
+}
+
+.menu_transformation2 {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  top: 0px;
+}
+.sticky_main2 .collapse {
+  opacity: 1;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.collapse {
+  visibility: visible;
+  animation: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-iteration-count: 1;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anim_cercle:hover {
+  stroke-dashoffset: 50-$dash-array;
+  animation: 0.325s ease 0s fillOutline;
+}
+@keyframes fillOutline {
+  from {
+    stroke-dashoffset: $dash-array;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arrow {
+  fill: none;
+  stroke-width: 0.6px;
+  stroke: #ffe0dc;
+  stroke-miterlimit: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  top: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -2;
+  bottom: 4px;
+}
+
+$translate: 0, 0, 0, 2;
+
+.anim_arrow {
+  transform: matrix(0, 0, 0, 0); /*animation du cercle au mouseenter*/
+  animation: 0.325s ease 0s emptyTranslate;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    display: block;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+    background: center / contain no-repeat url("../../svg/go.svg");
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    display: block;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+    background: center / contain no-repeat url("../../svg/go.svg");
+  }
+}
+@keyframes emptyTranslate {
+  from {
+    transform: matrix(0, 0, 0, 0);
+  }
+  to {
+    transform: matrix($translate);
+  }
+}
+
+.anim_arrow2 {
+  opacity: 0;
+  animation: 0s ease eteindre;
+}
+
+.anim_arrow3 {
+  opacity: 0;
+  animation: 0s ease eteindre;
+}
+
+@keyframes eteindre {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

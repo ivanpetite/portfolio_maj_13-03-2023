@@ -13,6 +13,8 @@ html.has-scroll-dragging {
 
 .has-scroll-smooth [data-scroll-container] {
   min-height: 100vh;
+  width: 100vw;
+  position: fixed;
 }
 [data-scroll-direction=horizontal] [data-scroll-container] {
   white-space: nowrap;
@@ -20,6 +22,7 @@ html.has-scroll-dragging {
 
 [data-scroll-direction=horizontal] [data-scroll-section] {
   white-space: nowrap;
+  position: fixed;
 }
 
 .c-scrollbar {

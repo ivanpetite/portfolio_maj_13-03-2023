@@ -38,36 +38,25 @@ tl.from(".sticky_main",{opacity:0,
                           ease: "Power3.easeOut"}, "-=0.5"
                           )
 
-tl.from(".mainbutton",{ 
-y : 20,
-opacity:0,
-duration: .5,
-ease: "Power3.easeOut"}, "2" )
-
 const scroller = document.querySelector('[data-scroll-container]')
 
 const locoScroll = new LocomotiveScroll({
   el: scroller,
-  smooth: true,
-  direction: "vertical",
-  multiplier: 1,
-  firefoxMultiplier: 1,
-  touchMultiplier: 1,
+smooth: true,
+multiplier: 0.7,
+lerp: 0.1,
+touchMultiplier: 7,
 
-  smartphone: {
-    smooth: true,
-    direction: "vertical",
-    gestureDirection: "vertical",
-    touchMultiplier: 5,
-
-  },
-  tablet: {
-    smooth: true,
-    direction: "vertical",
-    gestureDirection: "vertical",
-    touchMultiplier: 3,
-  }
+tablet: {
+smooth: true,
+breakpoint: 0,
+},
+mobile: {
+smooth: true,
+breakpoint: 0,
+},
 });
+
 
 locoScroll.on("scroll", ScrollTrigger.update);
 

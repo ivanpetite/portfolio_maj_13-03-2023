@@ -1,0 +1,25 @@
+.wrap10 {
+  overflow: hidden;
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #7d938a;
+  z-index: 102;
+}
+
+.wrap20 {
+  overflow: hidden;
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #ffe0dc;
+  z-index: 101;
+}/*# sourceMappingURL=transition_horizont_lien2.css.map */

@@ -1,0 +1,45 @@
+// main colors
+$--color-purple: #5114de;
+$--color-pink: #ffe0dc;
+$--color-green: #7d938a;
+$--color-orange: rgb(240, 97, 30);
+$--color-black: black;
+$--color-white: white;
+
+$--color-background: #1f1e1e;
+
+.menu_main4 {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  padding: 0px;
+  z-index: 100;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.menu_main4_bg3 {
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  background-color: $--color-pink;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.menu_main4_bg4 {
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  background-color: $--color-green;
+  z-index: 101;
+  overflow: hidden;
+}
+
+#trans6 {
+  color: $--color-green;
+}

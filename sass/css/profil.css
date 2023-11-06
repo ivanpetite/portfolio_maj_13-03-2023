@@ -1,47 +1,53 @@
 .main-profil {
   display: flex;
-  height: auto;
-  padding: 50px 30px 0px 30px;
-  width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
+  height: auto;
+  padding: calc(5em + 3rem) 2em;
   font-size: 0.8em;
   word-spacing: -0.2em;
+  background-color: #7d938a;
+  box-shadow: 0px 1px 1px 0px #ffe0dc, 0px -1px 1px 0px #9e9e9e;
 }
 
 .profil1 {
-  font-family: "ApercuProMono";
-  color: #ffe0dc;
-  width: 100%;
-  margin-bottom: 15px;
   display: flex;
   justify-content: center;
+  width: 100%;
+  font-family: "ApercuProMono";
+  color: #ffe0dc;
 }
 
 .profil2 {
   display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
+  margin-top: 1rem;
   font-family: "ApercuProMono";
   color: #ffe0dc;
-  justify-content: center;
 }
 
 .photo-profil {
-  width: 100%;
-  height: 100%;
-  max-width: 75px;
-  max-height: 75px;
+  display: flex;
+  align-items: baseline;
   float: left;
-  margin-right: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  max-width: 75px;
+  margin-right: 0.5rem;
+  margin-left: 0.1rem;
+  filter: drop-shadow(0px 0px 10px rgba(220, 220, 220, 0.1));
 }
 
 .fw-bold {
-  font-weight: bold;
-  -webkit-text-stroke-width: 0.4px;
+  color: #1f1e1e;
 }
 
 .color-red {
@@ -60,31 +66,46 @@
 
 @media screen and (min-width: 0px) and (max-width: 424px) {
   .main-profil {
-    padding: 50px 30px 0px;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
   .photo-profil {
-    max-width: 70px;
-    max-height: 70px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 425px) and (max-width: 767px) {
   .main-profil {
-    padding: 100px 150px 100px;
-    font-size: 0.9em;
+    font-size: 1rem;
   }
   .photo-profil {
-    max-width: 75px;
-    max-height: 75px;
+    width: 70%;
+    max-width: 100px;
+    margin-left: -0.5rem;
+    margin-right: 0rem;
+  }
+  .description-profil2 {
+    max-width: 665px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .main-profil {
-    padding: 100px 420px 100px;
-    font-size: 1.1em;
+    font-size: 1rem;
+    line-height: normal;
   }
   .photo-profil {
-    max-width: 80px;
-    max-height: 80px;
+    width: 90%;
+  }
+  .profil1,
+  .profil2 {
+    font-size: 1rem;
+  }
+  .description-profil2 {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .main-profil {
+    font: size 1rem;
   }
 }/*# sourceMappingURL=profil.css.map */

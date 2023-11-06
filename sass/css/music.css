@@ -24,6 +24,7 @@
   margin: 0 1.2px;
   padding: 0 0.5px;
   height: 15px;
+  border-radius: 2em;
   z-index: 0;
   animation-play-state: paused;
   --animdur: 0.6s;
@@ -36,7 +37,7 @@
 }
 
 .bg-audio-wire {
-  background-color: rgba(11, 10, 10, 0.8705882353);
+  background-color: #2c2c2a;
   height: 60%;
   position: absolute;
   width: 70%;

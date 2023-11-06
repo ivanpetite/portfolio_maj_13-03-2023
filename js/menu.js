@@ -32,7 +32,7 @@ autoAlpha: 0,
 .from( ".volet1, .volet2", {
 duration: .5,
 transformOrigin:"left bottom",
-scaleX:0,
+clipPath: 'inset(0% 100% 0% 0%)',
 stagger:0.01,
 }, "-=.5")
 
@@ -54,31 +54,6 @@ stagger:0.01,
   autoAlpha: 0,
   duration:0,
   },0);
+
 document.querySelector("#Menu").onclick = () => {menu.reversed() ? menu.play() : menu.reverse();};
 {$(".hide_menu2").on('click', function(){$("#Menu").trigger("click")})};
-const poster = document.querySelector('.poster2')
-const shadow = document.querySelector('#zoom')
-
-var zoom = gsap.timeline({
-  paused: "true",
-  reversed: "true",
-  });
-  
-zoom
-.set(poster,{scaleX:1, scaleY:1,})
-.set(shadow,{css:{backgroundColor: 'none'}})
-
-zoom.to(shadow,{
-  css:{backgroundColor: 'rgba(0, 0, 0, 0.0)'},
-  duration: 0.4,
-  ease: "Power1.easeInOut",
-  },0)
-
-      .to(poster,{
-      scaleX:1.1,
-      scaleY:1.1,
-      duration: 0.4,
-      ease: "Power1.easeInOut",
-      },"<");
-
-$('#zoom').on('mouseenter mouseleave', function(){zoom.reversed() ? zoom.play() : zoom.reverse();});

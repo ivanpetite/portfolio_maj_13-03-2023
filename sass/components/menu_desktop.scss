@@ -1,3 +1,48 @@
+// root
+:root {
+  $--font-main: "ApercuProMono";
+  font: size 16px $--font-main;
+}
+
+// text line height
+$--line-height-simple: 1rem;
+$--line-height-quart: 1.25rem;
+$--line-height-double: 2rem;
+$--line-height-triple: 3rem;
+$--line-height-quad: 4rem;
+
+// margin
+$--margin-10: 10px;
+$--margin-20: 20px;
+$--margin-simple: 1rem;
+$--margin-double: 2rem;
+$--margin-triple: 3rem;
+$--margin-quad: 4rem;
+
+// main colors
+$--color-purple: #5114de;
+$--color-pink: #ffe0dc;
+$--color-green: #7d938a;
+$--color-orange: rgb(240, 97, 30);
+$--color-black: black;
+$--color-white: white;
+
+$--color-background: #1f1e1e;
+
+// border
+$--border-background: #cbcbcb;
+
+//font
+$--font-main: "ApercuProMono";
+$--font-secondary: "ITC Odyssee";
+$--font-menu: "TIMMONS NY 2.0";
+
+$--font-size-1: 1rem;
+$--font-size-2: 2rem;
+$--font-size-4: 4rem;
+$--font-size-5: 5rem;
+$--font-size-8: 8rem;
+
 .menu_main3 {
   height: 100%;
   width: 0%;
@@ -15,9 +60,9 @@
   width: 100%;
   position: absolute;
   padding: 0px;
-  background-color: #ffe0dc;
+  background-color: $--color-pink;
   z-index: 89;
-  z-index: 5;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -26,17 +71,18 @@
   width: 100%;
   position: absolute;
   padding: 0px;
-  background-color: black;
+  background-color: $--color-white;
   z-index: 90;
-  z-index: 5;
+  z-index: -1;
   overflow: hidden;
 }
+
 .menu3 {
   display: flex;
-  font-family: "TIMMONS NY 2.0";
+  font-family: $--font-menu;
   font-style: normal;
   font-weight: 100;
-  font-size: 5em;
+  font-size: $--font-size-5;
   justify-content: center;
   margin: 0px;
   flex-direction: column;
@@ -51,14 +97,18 @@
   padding: 0px;
   position: absolute;
   width: 40vw;
-  z-index: 5;
+  z-index: 4;
   overflow: hidden;
-  background-color: #ffe0dc;
+  background-color: rgb(143 208 199);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-self: center;
+  border-left: 0.3rem solid $--color-white;
+  border-right: 0.3rem solid $--color-white;
+  mix-blend-mode: multiply;
+  clip-path: inset(0% 0% 0% 0%);
 }
 
 .volet2 {
@@ -67,16 +117,20 @@
   padding: 0px;
   position: absolute;
   width: 40vw;
-  z-index: 6;
+  z-index: 3;
   overflow: hidden;
-  background-color: #7d938a;
+  background-color: $--color-green;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-self: center;
-  border-left: 0.3em solid white;
-  border-right: 0.3em solid white;
+  border-left: 0.3rem solid $--color-white;
+  border-right: 0.3rem solid $--color-white;
+
+  background: url("../../img/anims/menu_d/menu_d.avifs");
+  background-size: cover;
+  clip-path: inset(0% 0% 0% 0%);
 }
 
 .menu-txt-flex {
@@ -96,9 +150,9 @@
 
 .menu-txt-overflow {
   align-self: center;
-  color: #ffe0dc;
-  font-family: ApercuProMono;
-  font-size: 1em;
+  color: $--color-pink;
+  font-family: $--font-main;
+  font-size: $--font-size-1;
   justify-content: center;
   margin: 1px;
   opacity: 100%;
@@ -107,12 +161,12 @@
 }
 
 .cat3 {
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: $--color-white;
   -webkit-text-stroke-width: 1px;
 }
 
 .cat4 {
-  color: #7d938a;
+  color: $--color-green;
 }
 
 .view_menu2 {
@@ -124,7 +178,7 @@
   width: 100%;
   max-width: 95vw;
   margin-bottom: 0px;
-  font-family: "ApercuProMono";
+  font-family: $--font-main;
   font-style: normal;
   font-weight: 100;
   flex-direction: column;
@@ -132,8 +186,53 @@
 }
 
 .hide_menu2 {
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: $--color-white;
 }
 .hide_menu2:hover {
-  -webkit-text-fill-color: rgb(240, 97, 30);
+  -webkit-text-fill-color: $--color-orange;
+}
+
+// media queries
+// only mobile
+@media screen and (max-width: 424px) {
+}
+
+// only tablet
+@media screen and (min-width: 425px) and (max-width: 767px) {
+}
+
+// only desktop normal
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+// only desktop xl
+@media screen and (min-width: 1024px) and (max-width: 2559px) {
+}
+
+// since desktop
+@media screen and (min-width: 1024px) and (max-width: 3840px) {
+}
+
+// only desktop 4K
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
+}
+
+// mobile + tablet for on/off the displaying
+@media screen and (max-width: 767px) {
+}
+// tablet + desktop for on/off the displaying
+@media screen and (min-width: 425px) {
+  .menu-txt-flex {
+    height: 65vh;
+  }
+
+  .menu-txt-overflow {
+    color: $--color-green;
+  }
+  .volet1 {
+    height: 65vh;
+  }
+  .volet2 {
+    height: 65vh;
+  }
 }

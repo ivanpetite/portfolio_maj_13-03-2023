@@ -1,0 +1,35 @@
+// main colors
+$--color-purple: #5114de;
+$--color-pink: #ffe0dc;
+$--color-green: #7d938a;
+$--color-orange: rgb(240, 97, 30);
+$--color-black: black;
+$--color-white: white;
+
+$--color-background: #1f1e1e;
+
+.wrap10 {
+  overflow: hidden;
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: $--color-green;
+  z-index: 102;
+}
+
+.wrap20 {
+  overflow: hidden;
+  position: absolute;
+  height: 150%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: $--color-pink;
+  z-index: 101;
+}

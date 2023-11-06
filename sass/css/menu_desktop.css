@@ -1,3 +1,7 @@
+:root {
+  font: size 16px "ApercuProMono";
+}
+
 .menu_main3 {
   height: 100%;
   width: 0%;
@@ -17,7 +21,7 @@
   padding: 0px;
   background-color: #ffe0dc;
   z-index: 89;
-  z-index: 5;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -26,9 +30,9 @@
   width: 100%;
   position: absolute;
   padding: 0px;
-  background-color: black;
+  background-color: white;
   z-index: 90;
-  z-index: 5;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -37,7 +41,7 @@
   font-family: "TIMMONS NY 2.0";
   font-style: normal;
   font-weight: 100;
-  font-size: 5em;
+  font-size: 5rem;
   justify-content: center;
   margin: 0px;
   flex-direction: column;
@@ -52,14 +56,19 @@
   padding: 0px;
   position: absolute;
   width: 40vw;
-  z-index: 5;
+  z-index: 4;
   overflow: hidden;
-  background-color: #ffe0dc;
+  background-color: rgb(143, 208, 199);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-self: center;
+  border-left: 0.3rem solid white;
+  border-right: 0.3rem solid white;
+  mix-blend-mode: multiply;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
 }
 
 .volet2 {
@@ -68,7 +77,7 @@
   padding: 0px;
   position: absolute;
   width: 40vw;
-  z-index: 6;
+  z-index: 3;
   overflow: hidden;
   background-color: #7d938a;
   display: flex;
@@ -76,8 +85,12 @@
   justify-content: center;
   flex-direction: column;
   align-self: center;
-  border-left: 0.3em solid white;
-  border-right: 0.3em solid white;
+  border-left: 0.3rem solid white;
+  border-right: 0.3rem solid white;
+  background: url("../../img/anims/menu_d/menu_d.avifs");
+  background-size: cover;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
 }
 
 .menu-txt-flex {
@@ -98,8 +111,8 @@
 .menu-txt-overflow {
   align-self: center;
   color: #ffe0dc;
-  font-family: ApercuProMono;
-  font-size: 1em;
+  font-family: "ApercuProMono";
+  font-size: 1rem;
   justify-content: center;
   margin: 1px;
   opacity: 100%;
@@ -140,4 +153,19 @@
 
 .hide_menu2:hover {
   -webkit-text-fill-color: rgb(240, 97, 30);
+}
+
+@media screen and (min-width: 425px) {
+  .menu-txt-flex {
+    height: 65vh;
+  }
+  .menu-txt-overflow {
+    color: #7d938a;
+  }
+  .volet1 {
+    height: 65vh;
+  }
+  .volet2 {
+    height: 65vh;
+  }
 }/*# sourceMappingURL=menu_desktop.css.map */
